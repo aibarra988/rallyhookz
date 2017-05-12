@@ -10,6 +10,8 @@
     "author": "Team BAH!",
     "license": "NONE!",
     "dependencies": {
-        "express": "~4.15"
+        "express": "~4.15",
+        "body-parser": "~1.17",
+        "multer": "~1.3"
     }
 }
