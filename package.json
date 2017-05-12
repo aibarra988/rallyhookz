@@ -1,0 +1,15 @@
+{
+    "name": "rallyhookz",
+    "version": "0.1.0",
+    "description": "Got 'dem mad hookz",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node main.js"
+    },
+    "author": "Team BAH!",
+    "license": "NONE!",
+    "dependencies": {
+        "express": "~4.15"
+    }
+}
