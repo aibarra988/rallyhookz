@@ -33,7 +33,7 @@ router.post('/listen', (req, res) => {
 			.then(response => {
 				console.log("Response from Rally after update: ", response);
 				res.send('Successfully updated ' + rallyDefectId + ' in Rally');
-			}))
+			})
 			.catch(error => {
 				console.log(error);
 				res.send(err);
