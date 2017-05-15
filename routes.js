@@ -48,7 +48,7 @@ function getRallyDefectById(id) {
 	console.log('rallyDefectId in its function: ', id);
 	const queryString = '?query=(FormattedId = ' + id + ')&fetch=true';
 	const getOptions = {
-		url: site,
+		url: site + queryString,
 		headers: authHeader,
 		json: true
 	};
