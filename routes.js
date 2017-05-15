@@ -57,6 +57,7 @@ function getRallyDefectById(id) {
 }
 
 function updateInRally(rallyDefect) {
+	console.log('rallyDefect in its function: ', rallyDefect.QueryResult);
 	const defectUri = rallyDefect.QueryResult.Results[0]._ref;
 	const payload = {
 		"Defect": {
