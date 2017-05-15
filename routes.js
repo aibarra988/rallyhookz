@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 	});
 });
 
-router.post('/', (req, res) => {
+router.post('/listen', (req, res) => {
 	// Process git event and find the Rally Defect Id in title of pull request
 	const prTitle = req.body.pull_request.title;
 	const rallyDefectId = 'DE1';	// regex to get rally defect number from pr title
