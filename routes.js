@@ -31,7 +31,7 @@ router.post('/listen', (req, res) => {
 		getRallyDefectById(rallyDefectId)
 			.then(updateInRally)
 			.then(response => {
-				console.log("I am in updateInRally ", response;
+				console.log("Response from Rally after update: ", response);
 				res.send('Successfully updated ' + rallyDefectId + ' in Rally');
 			}))
 			.catch(error => {
@@ -45,7 +45,7 @@ router.post('/listen', (req, res) => {
 });
 
 function getRallyDefectById(id) {
-	console.log('rallyDefectId', id)
+	console.log('rallyDefectId in its function: ', id);
 	const queryString = '?query=(FormattedId = ' + id + ')&fetch=true';
 	const getOptions = {
 		url: site,
