@@ -24,6 +24,7 @@ router.post('/listen', (req, res) => {
 
 	console.log('idFilter: ', idFilter);
 	console.log('reResult: ', reResult);
+	console.log('rallyDefectId', rallyDefectId);
 
 	console.log('Pull Request Event: ', req.body);
 
@@ -31,7 +32,6 @@ router.post('/listen', (req, res) => {
 		// Find and update Rally ticket
 		getRallyDefectById(rallyDefectId)
 			.then(updateInRally)
-			.then(response => console.log("I am in updateInRally ", response))
 			.catch(error => console.log(error))
 			.then((err, success) => {
 				if (err) res.send(err);
