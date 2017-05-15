@@ -26,17 +26,18 @@ router.post('/listen', (req, res) => {
 	console.log('reResult: ', reResult);
 	console.log('rallyDefectId', rallyDefectId);
 
-	console.log('Pull Request Event: ', req.body);
-
 	if (req.body.action === "closed" && req.body.pull_request.merged) {
 		// Find and update Rally ticket
 		getRallyDefectById(rallyDefectId)
 			.then(updateInRally)
-			.catch(error => console.log(error))
-			.then((err, success) => {
-				if (err) res.send(err);
+			.then(response => {
+				console.log("I am in updateInRally ", response;
 				res.send('Successfully updated ' + rallyDefectId + ' in Rally');
-			}); 	
+			}))
+			.catch(error => {
+				console.log(error);
+				res.send(err);
+			})
 	} else {
 		res.send("PR action was not 'merged'");
 	}
