@@ -27,7 +27,7 @@ router.post('/listen', (req, res) => {
 
 	console.log('Pull Request Event: ', req.body);
 
-	if (req.body.action === "merged" && req.body.pull_request.merged) {
+	if (req.body.action === "closed" && req.body.merged) {
 		// Find and update Rally ticket
 		getRallyDefectById(rallyDefectId)
 			.then(updateInRally)
